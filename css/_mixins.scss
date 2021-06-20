@@ -1,0 +1,24 @@
+$black: #000000;
+$background_color: #16161a;
+$heading_color: #fffffe;
+$button_color: #7f5af0;
+$paragraph_color: #94a1b2;
+$card_color: #242629;
+$white: #FFFFFF;
+
+
+
+
+%flexbox
+{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+}

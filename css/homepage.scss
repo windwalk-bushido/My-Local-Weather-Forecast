@@ -1,0 +1,118 @@
+@import "mixins";
+
+@font-face
+{
+	font-family: Nunito;
+	src: url(font/Nunito-Regular.ttf);
+}
+
+
+
+
+html
+{
+	font-family: Nunito, sans-serif;
+	font-size: 16px;
+
+	background-color: $black;
+	color: $heading_color;
+
+	p
+	{
+		margin: 0px;
+		padding: 0px;
+	}
+}
+
+body
+{
+	@extend %flexbox;
+}
+
+::selection
+{
+	background-color: $heading_color;
+	color: $background_color;
+}
+
+
+
+
+.weather_card
+{
+	@extend %flexbox;
+	
+	min-width: 25%;
+	width: 512px;
+	max-width: 50%;
+
+	padding: 1rem;
+
+	border: 2px solid $paragraph_color;
+	border-radius: 4rem;
+
+	background-color: $background_color;
+
+	.box_left
+	{
+		@extend %flexbox;
+
+		width: 50%;
+
+		.icon
+		{
+			@extend %flexbox;
+
+			i
+			{
+				font-size: 8rem;
+			}
+		}
+
+		.description
+		{
+			@extend %flexbox;
+
+			padding-top: 2rem;
+
+			font-size: 1.5rem;
+		}
+	}
+
+	.box_right
+	{
+		@extend %flexbox;
+		flex-direction: column;
+
+		width: 50%;
+
+
+		.time_info,
+		.wind_info
+		{
+			@extend %flexbox;
+			flex-direction: column;
+
+			font-size: 1.5rem;
+
+			i
+			{
+				margin-bottom: 8px;
+			}
+		}
+
+		.temperature
+		{
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+
+			font-size: 4rem;
+		}
+	}
+}
+
+.voidbox
+{
+	height: 100%;
+	z-index: -10;
+}

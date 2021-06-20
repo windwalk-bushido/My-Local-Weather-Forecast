@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+        <meta charset="utf-8">
+        <title>Weather Forecast</title>
+        <meta name="description" content="Weather forecast for Lebane, Serbia.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="icon" href="weather.svg">
+        <link rel="apple-touch-icon" href="weather.svg">
+
+        <link rel="stylesheet" href="css/config/normalize.css">
+        <link rel="stylesheet" href="css/config/main.css">
+        <link href="fontawesome/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/homepage.css">
+</head>
+
+<body>
+        <div class="weather_card">
+                <div class="box_left">
+                        <div class="icon">
+                                <i class="fas fa-cloud-sun" id="icon"></i>
+                        </div>
+                        <div class="description">
+                                <p id="p_weather">Unknown</p>
+                        </div>
+                </div>
+        
+                <div class="box_right">
+                        <div class="time_info">
+                                <i class="fas fa-clock"></i> <p id="p_time">??:??</p>
+                        </div>
+                
+                        <div class="temperature">
+                                <p id="p_temperature">? °C</p>
+                        </div>
+                
+                        <div class="wind_info">
+                                <i class="fas fa-wind"></i> <p id="p_wind">? km/h</p>
+                        </div>
+                </div>
+        </div>
+        
+        <div class="void" id="voidbox">
+
+        </div>
+
+
+
+        <script defer src="js/config/vendor/modernizr-3.11.2.min.js"></script>
+        <script defer src="js/config/plugins.js"></script>
+        <script defer src="js/config/main.js"></script>
+        <script defer src="js/main.js"></script>
+</body>
+
+</html>
