@@ -27,6 +27,12 @@ html p {
   padding: 0px;
 }
 
+body {
+  min-height: 768px;
+  height: 900px;
+  max-height: 1080px;
+}
+
 ::-moz-selection {
   background-color: #fffffe;
   color: #16161a;

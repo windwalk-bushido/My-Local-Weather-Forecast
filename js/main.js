@@ -13,9 +13,12 @@ function CallAPI() {
         var description = requested_data["description"];
         var current_time = new Date();
         var hours = current_time.getHours();
+        if (hours < 10) {
+            hours = "0" + hours.toString();
+        }
         var minutes = current_time.getMinutes();
         if (minutes < 10) {
-            "0" + minutes.toString();
+            minutes = "0" + minutes.toString();
         }
         ;
         var time = hours + ":" + minutes;
@@ -30,8 +33,6 @@ function CallAPI() {
 }
 CallAPI(); //Call function on site load up.
 setInterval(CallAPI, 60000); //Function will be called every minute.
-var voidbox = document.getElementById("void");
-voidbox.style.height = document.body.clientHeight.toString();
 // <i class="fas fa-sun"></i> SUNNY
 // <i class="fas fa-cloud-sun"></i> SUNNY + CLOUD
 // <i class="fas fa-cloud-sun-rain"></i> SUNNY + RAINING
@@ -46,3 +47,4 @@ voidbox.style.height = document.body.clientHeight.toString();
 // <i class="fas fa-wind"></i> WINDY
 // Night after 8 PM
 // Day after 5 AM
+// Partialy Cloudy, Cloudy, Sunny, Clear
